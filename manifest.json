@@ -1,0 +1,12 @@
+{
+	"name": "Puerto Rico Show VP",
+	"description": "Shows the victory points of each player.",
+	"version": "1",
+	"manifest_version": 2,
+	"content_scripts": [
+		{
+			"matches": ["https://en.boardgamearena.com/*", "http://en.boardgamearena.com/*"],
+			"js": ["background.js"]
+		}
+	]
+}
