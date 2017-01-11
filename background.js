@@ -11,6 +11,7 @@ function main() {
     })
 
     function parseLogs() {
+        //console.debug('testing...')
         var logs = document.querySelectorAll('#logs .log .roundedbox:not(.parsed)'),
             regex = /\d+ victory point/,
             endRegex = /during the game/
@@ -27,6 +28,8 @@ function main() {
                 var points = parseInt(result[0].replace(' victory points', '')),
                     player = next.querySelectorAll('span')[0].innerText
 
+                //console.debug(player + ' ' + points)
+
                 //add points
                 vpElements[player].points += points
                 vpElements[player].element.innerText = vpElements[player].points
@@ -39,4 +42,4 @@ function main() {
     intervalId = setInterval(parseLogs, timeout);
 }
 
-main()
+setTimeout(main, 5000)

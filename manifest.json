@@ -5,7 +5,7 @@
 	"manifest_version": 2,
 	"content_scripts": [
 		{
-			"matches": ["https://en.boardgamearena.com/*", "http://en.boardgamearena.com/*"],
+			"matches": [ "*://*.boardgamearena.com/*" ],
 			"js": ["background.js"]
 		}
 	]
